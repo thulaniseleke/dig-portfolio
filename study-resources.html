@@ -1,1 +1,620 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study resources for mathematics, data analytics, Excel, Power BI, programming and academic development by Thulani Dawin Seleke.">
+    <title>Study Resources | Thulani Dawin Seleke</title>
+
+    <style>
+        :root {
+            --background: #f5f4ef;
+            --surface: #ffffff;
+            --text: #20221f;
+            --muted: #686d66;
+            --green: #40594b;
+            --line: #dedfd7;
+            --soft-green: #ecefe9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .site-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 7%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand span {
+            color: var(--green);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .page-intro {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 7% 40px;
+        }
+
+        .eyebrow {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.72rem;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            letter-spacing: -0.6px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .page-intro p:last-child {
+            max-width: 690px;
+            color: var(--muted);
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 7% 85px;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 700px;
+            font-size: 0.93rem;
+            margin-bottom: 28px;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .resource-category {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-bottom: 11px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .resource-card p {
+            color: var(--muted);
+            font-size: 0.89rem;
+            margin-bottom: 17px;
+        }
+
+        .resource-card ul {
+            padding-left: 20px;
+            margin-bottom: 22px;
+            font-size: 0.88rem;
+        }
+
+        .resource-card li {
+            margin-bottom: 7px;
+        }
+
+        .resource-link {
+            display: inline-block;
+            color: var(--green);
+            font-size: 0.86rem;
+            font-weight: bold;
+            border-bottom: 1px solid var(--green);
+            padding-bottom: 3px;
+            margin-top: auto;
+        }
+
+        .resource-link:hover {
+            color: #263d30;
+            border-color: #263d30;
+        }
+
+        .learning-plan {
+            margin-top: 55px;
+        }
+
+        .plan-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .plan-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 25px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .plan-time {
+            color: var(--green);
+            font-size: 0.82rem;
+            font-weight: bold;
+        }
+
+        .plan-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .plan-item p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .study-principles {
+            margin-top: 55px;
+            padding: 30px;
+            background: var(--soft-green);
+            border-left: 3px solid var(--green);
+        }
+
+        .study-principles h2 {
+            font-size: 1.8rem;
+            margin-bottom: 14px;
+        }
+
+        .study-principles ul {
+            padding-left: 22px;
+        }
+
+        .study-principles li {
+            margin-bottom: 9px;
+            font-size: 0.9rem;
+        }
+
+        .note {
+            margin-top: 22px;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--line);
+            padding: 25px 7%;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                justify-content: flex-start;
+                gap: 12px;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .site-header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 0.72rem;
+            }
+
+            .page-intro {
+                padding: 45px 5% 30px;
+            }
+
+            .content {
+                padding: 0 5% 55px;
+            }
+
+            .resource-card {
+                padding: 22px;
+            }
+
+            .plan-item {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .study-principles {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a class="brand" href="index.html">
+                Thulani <span>Seleke.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="reflection.html">Individual Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html" class="active">Study Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Continuous Learning</p>
+            <h1>Study Resources</h1>
+            <p>
+                A collection of learning materials and trusted online platforms
+                that support my development in mathematics, business intelligence,
+                data analytics, digital tools and professional communication.
+                Learning is an ongoing process of building knowledge and applying
+                it to practical problems.
+            </p>
+        </section>
+
+        <section class="content">
+            <h2 class="section-heading">Explore learning resources</h2>
+            <p class="section-description">
+                These resources provide opportunities to practise technical
+                skills, strengthen academic foundations and explore tools used
+                in the data and business environment.
+            </p>
+
+            <div class="resource-grid">
+
+                <article class="resource-card">
+                    <p class="resource-category">01 · Data visualisation</p>
+                    <h3>Microsoft Power BI</h3>
+                    <p>
+                        Learn how to prepare data, create reports, develop
+                        dashboards and communicate insights through visualisations.
+                    </p>
+                    <ul>
+                        <li>Importing and transforming data</li>
+                        <li>Building charts and interactive reports</li>
+                        <li>Working with measures and KPIs</li>
+                        <li>Using filters and slicers</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://learn.microsoft.com/en-us/training/powerplatform/power-bi/"
+                       target="_blank" rel="noopener noreferrer">
+                        Explore Power BI training ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">02 · Spreadsheet skills</p>
+                    <h3>Microsoft Excel</h3>
+                    <p>
+                        Develop spreadsheet skills for calculations, data
+                        organisation, analysis, reporting and interactive summaries.
+                    </p>
+                    <ul>
+                        <li>Formulas and functions</li>
+                        <li>Sorting, filtering and data validation</li>
+                        <li>PivotTables, charts and slicers</li>
+                        <li>Data cleaning and presentation</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://support.microsoft.com/en-us/excel"
+                       target="_blank" rel="noopener noreferrer">
+                        Explore Excel support ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">03 · Data analysis</p>
+                    <h3>Data Analysis with Python</h3>
+                    <p>
+                        Explore programming concepts that can help with data
+                        preparation, analysis, calculations and automation.
+                    </p>
+                    <ul>
+                        <li>Python programming fundamentals</li>
+                        <li>Working with datasets</li>
+                        <li>Data manipulation with pandas</li>
+                        <li>Exploratory data analysis</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://www.python.org/about/gettingstarted/"
+                       target="_blank" rel="noopener noreferrer">
+                        Start learning Python ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">04 · Database knowledge</p>
+                    <h3>SQL and Databases</h3>
+                    <p>
+                        Learn how structured data is stored, retrieved and
+                        analysed using database query languages.
+                    </p>
+                    <ul>
+                        <li>Understanding tables and relationships</li>
+                        <li>SELECT, WHERE and ORDER BY</li>
+                        <li>Aggregate functions and GROUP BY</li>
+                        <li>Joining related tables</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://www.w3schools.com/sql/"
+                       target="_blank" rel="noopener noreferrer">
+                        Explore SQL tutorials ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">05 · Mathematics</p>
+                    <h3>Mathematics and Statistics</h3>
+                    <p>
+                        Strengthen quantitative reasoning and develop a clearer
+                        understanding of mathematical concepts used in data analysis.
+                    </p>
+                    <ul>
+                        <li>Algebra and numerical calculations</li>
+                        <li>Descriptive statistics</li>
+                        <li>Probability and distributions</li>
+                        <li>Interpreting data and variation</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://www.khanacademy.org/math"
+                       target="_blank" rel="noopener noreferrer">
+                        Study mathematics ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">06 · Data literacy</p>
+                    <h3>Statistics and Data Concepts</h3>
+                    <p>
+                        Build a foundation in interpreting evidence, summarising
+                        datasets and communicating findings responsibly.
+                    </p>
+                    <ul>
+                        <li>Mean, median and mode</li>
+                        <li>Qualitative and quantitative variables</li>
+                        <li>Frequency tables and distributions</li>
+                        <li>Charts, patterns and outliers</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://www.openintro.org/book/os/"
+                       target="_blank" rel="noopener noreferrer">
+                        Explore open statistics materials ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">07 · Academic development</p>
+                    <h3>Research and Study Skills</h3>
+                    <p>
+                        Improve the way information is researched, organised,
+                        referenced and communicated in academic assignments.
+                    </p>
+                    <ul>
+                        <li>Finding credible sources</li>
+                        <li>Taking structured study notes</li>
+                        <li>Planning assignments and reflections</li>
+                        <li>Referencing sources appropriately</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://owl.purdue.edu/"
+                       target="_blank" rel="noopener noreferrer">
+                        Explore academic writing guidance ↗
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <p class="resource-category">08 · Digital productivity</p>
+                    <h3>GitHub and Web Development</h3>
+                    <p>
+                        Learn how to organise files, maintain a project repository
+                        and publish web-based work as part of a digital portfolio.
+                    </p>
+                    <ul>
+                        <li>Understanding repositories and files</li>
+                        <li>Writing basic HTML and CSS</li>
+                        <li>Tracking changes with commits</li>
+                        <li>Publishing projects with GitHub Pages</li>
+                    </ul>
+                    <a class="resource-link"
+                       href="https://docs.github.com/en/pages"
+                       target="_blank" rel="noopener noreferrer">
+                        Learn about GitHub Pages ↗
+                    </a>
+                </article>
+
+            </div>
+
+            <section class="learning-plan">
+                <h2 class="section-heading">My learning approach</h2>
+                <p class="section-description">
+                    A practical routine for turning learning resources into
+                    knowledge and useful project experience.
+                </p>
+
+                <div class="plan-list">
+                    <article class="plan-item">
+                        <p class="plan-time">Step 01</p>
+                        <div>
+                            <h3>Understand the concept</h3>
+                            <p>
+                                Start with course notes and trusted learning
+                                materials. Focus on understanding the reason
+                                behind a concept rather than memorising steps.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="plan-item">
+                        <p class="plan-time">Step 02</p>
+                        <div>
+                            <h3>Practise with examples</h3>
+                            <p>
+                                Apply the concept through exercises, calculations,
+                                spreadsheet tasks, queries or small programming
+                                activities.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="plan-item">
+                        <p class="plan-time">Step 03</p>
+                        <div>
+                            <h3>Apply it to a project</h3>
+                            <p>
+                                Use the skills in practical work, such as cleaning
+                                a dataset, analysing variables, building charts
+                                or developing an interactive dashboard.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="plan-item">
+                        <p class="plan-time">Step 04</p>
+                        <div>
+                            <h3>Review and improve</h3>
+                            <p>
+                                Check the results, identify mistakes, document
+                                what was learned and revisit difficult concepts.
+                                Keep a record of progress and areas to develop.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="study-principles">
+                <h2>Principles for effective learning</h2>
+                <ul>
+                    <li>Set clear and achievable study goals.</li>
+                    <li>Practise consistently instead of relying only on last-minute preparation.</li>
+                    <li>Use exercises and real datasets to reinforce theoretical knowledge.</li>
+                    <li>Ask questions and seek clarification when a concept is unclear.</li>
+                    <li>Evaluate the reliability of information before using it in assignments.</li>
+                    <li>Reference external sources and acknowledge other people's work.</li>
+                    <li>Reflect on progress and identify the next skill to develop.</li>
+                </ul>
+            </section>
+
+            <p class="note">
+                Resource note: The links above lead to external educational
+                websites. Some resources may require an account or offer a
+                mixture of free and paid content. Always follow your institution's
+                requirements when using external materials in assignments.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© 2026 Thulani Dawin Seleke</p>
+            <p>Professional growth through learning and practical experience.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
