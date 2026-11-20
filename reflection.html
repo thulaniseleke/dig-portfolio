@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The individual learning reflection of Thulani Dawin Seleke.">
+    <title>Individual Reflection | Thulani Dawin Seleke</title>
+
+    <style>
+        :root {
+            --background: #f5f4ef;
+            --surface: #ffffff;
+            --text: #252922;
+            --muted: #686d65;
+            --accent: #40594b;
+            --accent-light: #e5ebe5;
+            --border: #dedfd7;
+            --dark: #202820;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1060px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            flex-shrink: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px 16px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+        }
+
+        .page-heading {
+            padding: 75px 0 55px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            line-height: 1.3;
+        }
+
+        h1 {
+            max-width: 800px;
+            margin-bottom: 18px;
+            font-size: clamp(2.7rem, 6vw, 4.5rem);
+            letter-spacing: -2px;
+        }
+
+        .page-heading p {
+            max-width: 690px;
+            color: var(--muted);
+        }
+
+        .reflection-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            align-items: start;
+            gap: 65px;
+            padding: 60px 0 85px;
+        }
+
+        .contents {
+            position: sticky;
+            top: 20px;
+            padding: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .contents h2 {
+            margin-bottom: 15px;
+            font-size: 1.35rem;
+        }
+
+        .contents a {
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.84rem;
+        }
+
+        .contents a:last-child {
+            border-bottom: none;
+        }
+
+        .contents a:hover {
+            color: var(--accent);
+        }
+
+        .reflection {
+            padding: 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .reflection-label {
+            margin-bottom: 25px;
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .reflection h2 {
+            margin: 38px 0 14px;
+            font-size: 1.75rem;
+        }
+
+        .reflection h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .reflection p {
+            margin-bottom: 17px;
+            color: #555b53;
+            font-size: 0.97rem;
+        }
+
+        .reflection p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pull-quote {
+            margin: 28px 0;
+            padding: 22px 25px;
+            border-left: 3px solid var(--accent);
+            background: var(--accent-light);
+            color: var(--dark);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .closing-note {
+            margin-top: 28px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            color: var(--accent);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .navbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+
+            .reflection-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .contents {
+                position: static;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: 92%;
+            }
+
+            .page-heading {
+                padding: 55px 0 38px;
+            }
+
+            .reflection-layout {
+                padding: 35px 0 55px;
+            }
+
+            .reflection {
+                padding: 24px;
+            }
+
+            .reflection h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a class="brand" href="index.html">Thulani <span>Seleke.</span></a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a class="active" aria-current="page" href="reflection.html">Individual Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-heading">
+            <div class="container">
+                <span class="eyebrow">Personal Development / 03</span>
+                <h1>Individual Reflection</h1>
+                <p>
+                    Reflecting on my learning, the skills I am developing,
+                    the experiences that have shaped me, and the direction
+                    in which I want to grow.
+                </p>
+            </div>
+        </section>
+
+        <div class="container reflection-layout">
+
+            <aside class="contents">
+                <h2>In this reflection</h2>
+                <a href="#journey">My Learning Journey</a>
+                <a href="#skills">Skills and Development</a>
+                <a href="#challenges">Challenges and Lessons</a>
+                <a href="#future">Future Development</a>
+            </aside>
+
+            <article class="reflection">
+
+                <div class="reflection-label">
+                    A personal account of learning and growth
+                </div>
+
+                <h2 id="journey">My Learning Journey</h2>
+
+                <p>
+                    My journey as a student of Business Intelligence and
+                    Data Analytics at Botswana Accountancy College is an
+                    opportunity to build knowledge that can be applied to
+                    real problems. I am particularly interested in the
+                    relationship between mathematics, computing and the
+                    interpretation of information. I want to understand
+                    not only how data is processed, but also how it can
+                    be presented in a way that supports better decisions.
+                </p>
+
+                <p>
+                    My earlier education at Radikolo Junior Secondary
+                    School and Premix Academy helped establish my
+                    academic foundation. Mathematics and science
+                    contributed to my interest in logical reasoning
+                    and structured problem-solving. As I progress in
+                    my studies, I recognise that learning requires
+                    consistency, curiosity and a willingness to improve
+                    when a topic is difficult.
+                </p>
+
+                <p>
+                    My experiences outside the classroom have also
+                    influenced how I approach responsibility. Assisting
+                    with flower orders, supporting football player
+                    administration and helping with agricultural
+                    payment administration have exposed me to different
+                    tasks that require organisation, communication
+                    and attention to detail. These responsibilities
+                    have helped me appreciate the importance of
+                    completing tasks carefully and keeping information
+                    organised.
+                </p>
+
+                <div class="pull-quote">
+                    Learning becomes more meaningful when knowledge
+                    can be connected to practical responsibilities.
+                </div>
+
+                <h2 id="skills">Skills and Development</h2>
+
+                <p>
+                    One important area of development for me is
+                    analytical thinking. My interest in mathematics
+                    provides a useful foundation for examining
+                    information logically, identifying patterns and
+                    considering how problems can be approached.
+                    Studying data analytics gives me an opportunity
+                    to strengthen these abilities through practical
+                    tools and structured analysis.
+                </p>
+
+                <p>
+                    Working with a New York City taxi dataset has
+                    provided practical exposure to data preparation
+                    and visualisation. The work involved cleaning
+                    data, exploring quantitative and categorical
+                    variables, creating charts and developing
+                    interactive dashboard elements using Excel
+                    and Power BI. I also worked with measures
+                    relating to average fare, average tip amount,
+                    average trip distance, total revenue and total
+                    trips.
+                </p>
+
+                <p>
+                    This type of work has shown me that analysis
+                    involves more than producing charts. The data
+                    needs to be prepared properly, the variables
+                    need to be understood, and the visual presentation
+                    needs to make the information easier to interpret.
+                    It has encouraged me to become more careful
+                    and systematic when working through analytical
+                    tasks.
+                </p>
+
+                <p>
+                    Communication and teamwork are also important
+                    areas of development. Academic tasks and
+                    administrative responsibilities require people
+                    to share information, understand instructions
+                    and contribute reliably. I want to continue
+                    improving my ability to explain ideas clearly,
+                    cooperate with others and manage my time
+                    effectively.
+                </p>
+
+                <h2 id="challenges">Challenges and Lessons</h2>
+
+                <p>
+                    Learning a new technical skill can require
+                    patience, especially when a task involves several
+                    steps or when the result does not immediately
+                    match expectations. My approach is to break
+                    a task into smaller parts, review the available
+                    information and work through the process
+                    systematically rather than rushing to a result.
+                </p>
+
+                <p>
+                    I am learning that mistakes and uncertainty
+                    can be useful opportunities to identify gaps
+                    in my understanding. Asking questions,
+                    practising a procedure and reviewing the
+                    outcome can help me develop a stronger grasp
+                    of a subject. I also recognise the importance
+                    of taking responsibility for my own learning
+                    instead of depending entirely on instructions
+                    from others.
+                </p>
+
+                <p>
+                    Another lesson is that professional development
+                    includes more than technical ability. Reliability,
+                    respect, communication and organisation matter
+                    when working with people and information.
+                    I want these qualities to remain part of the
+                    way I approach both academic work and future
+                    employment.
+                </p>
+
+                <h2 id="future">Future Development</h2>
+
+                <p>
+                    Going forward, I want to deepen my understanding
+                    of data analysis tools, strengthen my ability
+                    to interpret datasets and improve how I present
+                    findings through clear visualisations. I also
+                    want to build confidence in communicating
+                    analytical ideas to people who may not have
+                    a technical background.
+                </p>
+
+                <p>
+                    I plan to support my development through
+                    consistent practice, independent study,
+                    constructive feedback and participation in
+                    projects that allow me to apply what I learn.
+                    Keeping records of my work and reflecting on
+                    what went well or what needs improvement
+                    will help me track my progress over time.
+                </p>
+
+                <p>
+                    Overall, my learning journey is still developing.
+                    I have a foundation on which to build, practical
+                    experiences that have introduced me to different
+                    responsibilities, and a clear interest in
+                    analytical work. My goal is to become a capable,
+                    adaptable and responsible professional who
+                    continues learning and uses knowledge
+                    constructively.
+                </p>
+
+                <div class="closing-note">
+                    My development is an ongoing process of learning,
+                    applying, reflecting and improving.
+                </div>
+
+            </article>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Thulani Dawin Seleke</p>
+            <p>Individual Reflection · Personal Academic Portfolio</p>
+        </div>
+    </footer>
+
+</body>
+</html>
