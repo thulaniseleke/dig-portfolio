@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional email templates for Thulani Dawin Seleke, a Business Intelligence and Data Analytics student.">
+    <title>Email Template | Thulani Dawin Seleke</title>
+
+    <style>
+        :root {
+            --background: #f5f4ef;
+            --surface: #ffffff;
+            --text: #20221f;
+            --muted: #686d66;
+            --green: #40594b;
+            --line: #dedfd7;
+            --soft-green: #ecefe9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .site-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 7%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand span {
+            color: var(--green);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .page-intro {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 7% 35px;
+        }
+
+        .eyebrow {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.72rem;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            letter-spacing: -0.6px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .page-intro p:last-child {
+            max-width: 650px;
+            color: var(--muted);
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 7% 85px;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            margin-bottom: 28px;
+            max-width: 700px;
+            font-size: 0.94rem;
+        }
+
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .email-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .email-number {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .email-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .email-purpose {
+            color: var(--muted);
+            font-size: 0.87rem;
+            margin-bottom: 20px;
+        }
+
+        .email-fields {
+            background: #fafaf7;
+            border: 1px solid var(--line);
+            padding: 17px;
+            margin-bottom: 17px;
+            font-size: 0.85rem;
+            overflow-wrap: anywhere;
+        }
+
+        .email-fields p {
+            margin-bottom: 8px;
+        }
+
+        .email-fields p:last-child {
+            margin-bottom: 0;
+        }
+
+        .email-body {
+            font-size: 0.9rem;
+            white-space: pre-line;
+            margin-bottom: 20px;
+            overflow-wrap: anywhere;
+        }
+
+        .copy-button {
+            margin-top: auto;
+            align-self: flex-start;
+            border: none;
+            background: var(--green);
+            color: white;
+            padding: 11px 17px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.82rem;
+        }
+
+        .copy-button:hover {
+            background: #2e4337;
+        }
+
+        .guidelines {
+            margin-top: 55px;
+            background: var(--soft-green);
+            padding: 30px;
+            border-left: 3px solid var(--green);
+        }
+
+        .guidelines h2 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        .guidelines ul {
+            padding-left: 22px;
+        }
+
+        .guidelines li {
+            margin-bottom: 9px;
+            font-size: 0.9rem;
+        }
+
+        .signature-card {
+            margin-top: 25px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 25px;
+        }
+
+        .signature-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .signature-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--line);
+            padding: 25px 7%;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                justify-content: flex-start;
+                gap: 12px;
+            }
+
+            .email-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .site-header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 0.72rem;
+            }
+
+            .page-intro {
+                padding: 45px 5% 28px;
+            }
+
+            .content {
+                padding: 0 5% 55px;
+            }
+
+            .email-card {
+                padding: 21px;
+            }
+
+            .guidelines {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a class="brand" href="index.html">
+                Thulani <span>Seleke.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="reflection.html">Individual Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="email-template.html" class="active">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Professional Communication</p>
+            <h1>Email Templates</h1>
+            <p>
+                Clear, respectful and professional email examples for academic
+                communication, career opportunities and workplace correspondence.
+                Each template can be copied and adapted to the situation.
+            </p>
+        </section>
+
+        <section class="content">
+            <h2 class="section-heading">A practical email toolkit</h2>
+            <p class="section-description">
+                Choose the template that matches your purpose. The copy button
+                copies the complete email, including its subject line.
+            </p>
+
+            <div class="email-grid">
+
+                <article class="email-card">
+                    <p class="email-number">Template 01</p>
+                    <h3>Request for Industrial Attachment</h3>
+                    <p class="email-purpose">
+                        To enquire about practical training opportunities at an organisation.
+                    </p>
+
+                    <div class="email-fields">
+                        <p><strong>To:</strong> The relevant recruitment contact</p>
+                        <p><strong>Subject:</strong> Enquiry About Industrial Attachment Opportunities</p>
+                    </div>
+
+                    <div class="email-body" id="email1">Dear Hiring Manager,
+
+I hope this email finds you well.
+
+My name is Thulani Dawin Seleke, and I am a first-year Business Intelligence and Data Analytics student at Botswana Accountancy College.
+
+I am writing to enquire whether your organisation offers industrial attachment or practical learning opportunities relevant to my field of study. I am interested in developing my skills in data analysis, reporting, business intelligence and related administrative work.
+
+I would appreciate any information regarding available opportunities and the application requirements.
+
+Thank you for your time and consideration. I look forward to hearing from you.
+
+Kind regards,
+Thulani Dawin Seleke
+selekedawin@gmail.com
++267 76910345</div>
+
+                    <button class="copy-button" onclick="copyEmail('email1', 'subject1')">
+                        Copy email
+                    </button>
+                    <span id="subject1" hidden>Subject: Enquiry About Industrial Attachment Opportunities</span>
+                </article>
+
+                <article class="email-card">
+                    <p class="email-number">Template 02</p>
+                    <h3>Submitting an Application</h3>
+                    <p class="email-purpose">
+                        To send a CV and application letter for an advertised opportunity.
+                    </p>
+
+                    <div class="email-fields">
+                        <p><strong>To:</strong> The contact listed in the advert</p>
+                        <p><strong>Subject:</strong> Application for an Available Opportunity</p>
+                    </div>
+
+                    <div class="email-body" id="email2">Dear Hiring Manager,
+
+I hope you are well.
+
+Please find attached my CV and application letter for your consideration. I am a Business Intelligence and Data Analytics student at Botswana Accountancy College, with practical exposure to Excel, Power BI, data preparation and administrative responsibilities.
+
+I am enthusiastic about the opportunity to learn, contribute and develop my skills in a professional environment.
+
+Thank you for considering my application. I would welcome the opportunity to provide any additional information required.
+
+Kind regards,
+Thulani Dawin Seleke
+selekedawin@gmail.com
++267 76910345</div>
+
+                    <button class="copy-button" onclick="copyEmail('email2', 'subject2')">
+                        Copy email
+                    </button>
+                    <span id="subject2" hidden>Subject: Application for an Available Opportunity</span>
+                </article>
+
+                <article class="email-card">
+                    <p class="email-number">Template 03</p>
+                    <h3>Following Up on an Application</h3>
+                    <p class="email-purpose">
+                        To politely ask whether there is an update on an earlier application.
+                    </p>
+
+                    <div class="email-fields">
+                        <p><strong>To:</strong> The recruitment contact</p>
+                        <p><strong>Subject:</strong> Follow-Up on Submitted Application</p>
+                    </div>
+
+                    <div class="email-body" id="email3">Dear Hiring Manager,
+
+I hope you are doing well.
+
+I am writing to follow up respectfully on my application for the opportunity I previously submitted. I remain interested in the possibility of contributing to your organisation and gaining relevant professional experience.
+
+I understand that recruitment processes take time, and I would be grateful for any update you are able to share.
+
+Thank you for your time and consideration.
+
+Kind regards,
+Thulani Dawin Seleke
+selekedawin@gmail.com
++267 76910345</div>
+
+                    <button class="copy-button" onclick="copyEmail('email3', 'subject3')">
+                        Copy email
+                    </button>
+                    <span id="subject3" hidden>Subject: Follow-Up on Submitted Application</span>
+                </article>
+
+                <article class="email-card">
+                    <p class="email-number">Template 04</p>
+                    <h3>Email to a Lecturer</h3>
+                    <p class="email-purpose">
+                        To request academic guidance or clarification about coursework.
+                    </p>
+
+                    <div class="email-fields">
+                        <p><strong>To:</strong> The relevant lecturer</p>
+                        <p><strong>Subject:</strong> Request for Academic Guidance</p>
+                    </div>
+
+                    <div class="email-body" id="email4">Dear Lecturer,
+
+I hope you are well.
+
+I am writing to request clarification and guidance regarding the coursework I am currently working on. I would like to ensure that I understand the requirements correctly and complete the work to the expected standard.
+
+Please let me know if there is a suitable time to discuss the matter or if there are any resources you would recommend.
+
+Thank you for your time and assistance.
+
+Kind regards,
+Thulani Dawin Seleke
+Business Intelligence and Data Analytics
+Botswana Accountancy College</div>
+
+                    <button class="copy-button" onclick="copyEmail('email4', 'subject4')">
+                        Copy email
+                    </button>
+                    <span id="subject4" hidden>Subject: Request for Academic Guidance</span>
+                </article>
+
+                <article class="email-card">
+                    <p class="email-number">Template 05</p>
+                    <h3>Thank-You Email</h3>
+                    <p class="email-purpose">
+                        To thank someone after an interview, meeting or professional discussion.
+                    </p>
+
+                    <div class="email-fields">
+                        <p><strong>To:</strong> The person you met</p>
+                        <p><strong>Subject:</strong> Thank You for Your Time</p>
+                    </div>
+
+                    <div class="email-body" id="email5">Dear [Recipient's Name],
+
+Thank you for taking the time to meet with me and discuss the opportunity.
+
+I appreciate the information and guidance you shared. Our discussion has strengthened my interest in learning more about the role and how I could contribute.
+
+Thank you again for your time and consideration.
+
+Kind regards,
+Thulani Dawin Seleke
+selekedawin@gmail.com
++267 76910345</div>
+
+                    <button class="copy-button" onclick="copyEmail('email5', 'subject5')">
+                        Copy email
+                    </button>
+                    <span id="subject5" hidden>Subject: Thank You for Your Time</span>
+                </article>
+
+                <article class="email-card">
+                    <p class="email-number">Template 06</p>
+                    <h3>Request for Information</h3>
+                    <p class="email-purpose">
+                        To request information about a programme, service or professional opportunity.
+                    </p>
+
+                    <div class="email-fields">
+                        <p><strong>To:</strong> The relevant organisation</p>
+                        <p><strong>Subject:</strong> Request for Further Information</p>
+                    </div>
+
+                    <div class="email-body" id="email6">Dear Sir/Madam,
+
+I hope this email finds you well.
+
+I am contacting you to request further information about the programme, service or opportunity offered by your organisation.
+
+I would be grateful if you could share the relevant details, including eligibility requirements, application procedures and any important deadlines, where applicable.
+
+Thank you for your assistance. I look forward to your response.
+
+Kind regards,
+Thulani Dawin Seleke
+selekedawin@gmail.com
++267 76910345</div>
+
+                    <button class="copy-button" onclick="copyEmail('email6', 'subject6')">
+                        Copy email
+                    </button>
+                    <span id="subject6" hidden>Subject: Request for Further Information</span>
+                </article>
+
+            </div>
+
+            <section class="guidelines">
+                <h2>Principles of professional email writing</h2>
+                <ul>
+                    <li>Use a clear subject line that explains the purpose of the email.</li>
+                    <li>Address the recipient respectfully and use an appropriate greeting.</li>
+                    <li>Keep your message focused, polite and easy to understand.</li>
+                    <li>Use correct spelling, punctuation and professional language.</li>
+                    <li>Check that the recipient's email address and any attachments are correct before sending.</li>
+                    <li>Respond within a reasonable time and avoid repeated follow-ups in a short period.</li>
+                    <li>Use a professional email address and include a suitable signature.</li>
+                </ul>
+            </section>
+
+            <section class="signature-card">
+                <h3>Professional email signature</h3>
+                <p>
+                    Thulani Dawin Seleke<br>
+                    Business Intelligence and Data Analytics Student<br>
+                    Botswana Accountancy College<br>
+                    Email: selekedawin@gmail.com<br>
+                    Telephone: +267 76910345
+                </p>
+                <br>
+                <button class="copy-button" onclick="copySignature()">
+                    Copy email signature
+                </button>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© 2026 Thulani Dawin Seleke</p>
+            <p>Professional growth through learning and practical experience.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyEmail(emailId, subjectId) {
+            const emailBody = document.getElementById(emailId).innerText;
+            const subject = document.getElementById(subjectId).innerText;
+            const completeEmail = subject + "\n\n" + emailBody;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(completeEmail)
+                    .then(() => alert("Email copied successfully."))
+                    .catch(() => copyUsingFallback(completeEmail));
+            } else {
+                copyUsingFallback(completeEmail);
+            }
+        }
+
+        function copySignature() {
+            const signature =
+                "Thulani Dawin Seleke\n" +
+                "Business Intelligence and Data Analytics Student\n" +
+                "Botswana Accountancy College\n" +
+                "Email: selekedawin@gmail.com\n" +
+                "Telephone: +267 76910345";
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(signature)
+                    .then(() => alert("Email signature copied successfully."))
+                    .catch(() => copyUsingFallback(signature));
+            } else {
+                copyUsingFallback(signature);
+            }
+        }
+
+        function copyUsingFallback(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand("copy");
+                alert(successful
+                    ? "Copied successfully."
+                    : "Copy was not successful. Please select and copy the text manually.");
+            } catch (error) {
+                alert("Please select and copy the text manually.");
+            }
+
+            document.body.removeChild(textArea);
+        }
+    </script>
+
+</body>
+</html>
