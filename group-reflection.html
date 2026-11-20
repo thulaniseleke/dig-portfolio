@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A reflection on group development, collaboration and teamwork by Thulani Dawin Seleke.">
+    <title>Group Reflection | Thulani Dawin Seleke</title>
+
+    <style>
+        :root {
+            --background: #f5f4ef;
+            --surface: #ffffff;
+            --text: #252922;
+            --muted: #686d65;
+            --accent: #40594b;
+            --accent-light: #e5ebe5;
+            --border: #dedfd7;
+            --dark: #202820;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1060px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            flex-shrink: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px 16px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+        }
+
+        .page-heading {
+            padding: 75px 0 55px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            line-height: 1.3;
+        }
+
+        h1 {
+            max-width: 800px;
+            margin-bottom: 18px;
+            font-size: clamp(2.7rem, 6vw, 4.5rem);
+            letter-spacing: -2px;
+        }
+
+        .page-heading p {
+            max-width: 700px;
+            color: var(--muted);
+        }
+
+        .model-intro {
+            padding: 42px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .model-intro h2 {
+            margin-bottom: 12px;
+            font-size: 2rem;
+        }
+
+        .model-intro p {
+            max-width: 800px;
+            color: var(--muted);
+        }
+
+        .stage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            padding: 45px 0;
+        }
+
+        .stage-card {
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .stage-card:last-child {
+            grid-column: 1 / -1;
+        }
+
+        .stage-number {
+            display: inline-block;
+            margin-bottom: 17px;
+            color: var(--accent);
+            font-size: 0.77rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .stage-card h2 {
+            margin-bottom: 12px;
+            font-size: 1.7rem;
+        }
+
+        .stage-card p {
+            margin-bottom: 12px;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .stage-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .reflection-section {
+            padding: 70px 0;
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .reflection-content {
+            max-width: 800px;
+        }
+
+        .reflection-content h2 {
+            margin-bottom: 18px;
+            font-size: 2.2rem;
+        }
+
+        .reflection-content h3 {
+            margin: 28px 0 10px;
+            font-size: 1.45rem;
+        }
+
+        .reflection-content p {
+            margin-bottom: 17px;
+            color: var(--muted);
+        }
+
+        .takeaway {
+            margin-top: 28px;
+            padding: 25px;
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            color: var(--dark);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .note {
+            padding: 40px 0;
+        }
+
+        .note p {
+            max-width: 800px;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        footer {
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .navbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+            }
+
+            .page-heading {
+                padding: 55px 0 38px;
+            }
+
+            .stage-grid {
+                grid-template-columns: 1fr;
+                padding: 30px 0;
+            }
+
+            .stage-card:last-child {
+                grid-column: auto;
+            }
+
+            .stage-card {
+                padding: 23px;
+            }
+
+            .reflection-section {
+                padding: 48px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a class="brand" href="index.html">Thulani <span>Seleke.</span></a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="reflection.html">Individual Reflection</a>
+                <a class="active" aria-current="page" href="group-reflection.html">Group Reflection</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-heading">
+            <div class="container">
+                <span class="eyebrow">Collaborative Learning / 04</span>
+                <h1>Group Reflection</h1>
+                <p>
+                    An examination of how groups develop, how collaboration
+                    influences learning, and what effective teamwork
+                    requires throughout a shared task.
+                </p>
+            </div>
+        </section>
+
+        <section class="model-intro">
+            <div class="container">
+                <span class="eyebrow">Theoretical Framework</span>
+                <h2>Tuckman's stages of group development</h2>
+                <p>
+                    Bruce Tuckman's model describes five stages commonly
+                    associated with group development: Forming, Storming,
+                    Norming, Performing and Adjourning. The model provides
+                    a useful way to reflect on group communication,
+                    responsibilities, challenges and progress towards
+                    a shared objective. Groups do not always move through
+                    these stages in a perfectly linear way.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container stage-grid">
+
+                <article class="stage-card">
+                    <span class="stage-number">Stage 01</span>
+                    <h2>Forming</h2>
+                    <p>
+                        Forming is the initial stage in which group members
+                        become familiar with one another and begin
+                        understanding the task. Members may need time to
+                        clarify expectations, identify their strengths
+                        and decide how to work together.
+                    </p>
+                    <p>
+                        Reflecting on this stage encourages me to recognise
+                        the importance of establishing a shared objective,
+                        discussing expectations and agreeing on how
+                        information will be communicated. Clear
+                        responsibilities can provide direction from
+                        the beginning.
+                    </p>
+                </article>
+
+                <article class="stage-card">
+                    <span class="stage-number">Stage 02</span>
+                    <h2>Storming</h2>
+                    <p>
+                        During Storming, differences in opinions,
+                        approaches or expectations may become more visible.
+                        Members might disagree about priorities, the
+                        division of work or how a task should be completed.
+                    </p>
+                    <p>
+                        This stage highlights the need to listen
+                        respectfully, explain viewpoints clearly and
+                        address disagreements constructively. Differences
+                        do not have to prevent progress when members
+                        focus on the shared task and remain willing
+                        to find workable solutions.
+                    </p>
+                </article>
+
+                <article class="stage-card">
+                    <span class="stage-number">Stage 03</span>
+                    <h2>Norming</h2>
+                    <p>
+                        Norming involves developing stronger cooperation,
+                        clearer expectations and agreed ways of working.
+                        Members begin to understand their responsibilities
+                        and how their contributions connect to the
+                        group's overall objective.
+                    </p>
+                    <p>
+                        This stage demonstrates the value of accountability,
+                        consistent communication and mutual respect.
+                        Agreeing on deadlines, sharing updates and
+                        supporting members who need assistance can
+                        help a group work more effectively.
+                    </p>
+                </article>
+
+                <article class="stage-card">
+                    <span class="stage-number">Stage 04</span>
+                    <h2>Performing</h2>
+                    <p>
+                        At the Performing stage, a group is able to
+                        coordinate its work more effectively and
+                        concentrate on achieving its objectives.
+                        Members can use their different strengths
+                        to contribute to the task.
+                    </p>
+                    <p>
+                        Effective performance depends on more than
+                        dividing work. Members also need to check
+                        the quality of their contributions, communicate
+                        progress and help resolve problems. This
+                        encourages me to view teamwork as a shared
+                        responsibility for the final outcome.
+                    </p>
+                </article>
+
+                <article class="stage-card">
+                    <span class="stage-number">Stage 05</span>
+                    <h2>Adjourning</h2>
+                    <p>
+                        Adjourning occurs when the group completes
+                        its task and brings its work to a close.
+                        Members can review what they achieved,
+                        acknowledge contributions and identify
+                        lessons that can be applied in future
+                        collaborations.
+                    </p>
+                    <p>
+                        Reflection at this stage is important because
+                        completing a task is not the only measure
+                        of learning. Reviewing the process can reveal
+                        what worked well, what could be improved
+                        and how individual members have developed.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="reflection-section">
+            <div class="container">
+                <article class="reflection-content">
+
+                    <span class="eyebrow">Personal Learning</span>
+                    <h2>What effective collaboration requires</h2>
+
+                    <p>
+                        Group work provides an opportunity to learn
+                        from people with different ideas, experiences
+                        and approaches. A shared task requires
+                        members to communicate, manage their
+                        responsibilities and consider how their
+                        individual contributions affect the final
+                        result. It also requires flexibility because
+                        plans may need to change when challenges
+                        arise.
+                    </p>
+
+                    <h3>Communication and participation</h3>
+
+                    <p>
+                        Clear communication helps members understand
+                        what is expected and reduces the possibility
+                        of avoidable confusion. Listening is just
+                        as important as speaking because members
+                        need to understand different perspectives
+                        before making decisions. Meaningful
+                        participation also requires members to
+                        contribute rather than assuming that
+                        others will complete every task.
+                    </p>
+
+                    <h3>Responsibility and conflict management</h3>
+
+                    <p>
+                        A group works more effectively when members
+                        take ownership of their responsibilities
+                        and communicate honestly about progress.
+                        If disagreements arise, the focus should
+                        remain on understanding the problem and
+                        finding a solution. Respectful discussion,
+                        clear expectations and fair allocation
+                        of tasks can help protect working
+                        relationships while keeping the group
+                        focused on its objective.
+                    </p>
+
+                    <h3>Applying the lessons in future projects</h3>
+
+                    <p>
+                        In future group assignments, I want to
+                        contribute by understanding the task
+                        early, agreeing on responsibilities,
+                        keeping communication clear and completing
+                        my allocated work on time. I also want
+                        to be open to feedback and willing to
+                        assist where appropriate. These practices
+                        can strengthen collaboration and help
+                        ensure that the group produces work
+                        that reflects a shared effort.
+                    </p>
+
+                    <div class="takeaway">
+                        Effective teamwork is built through shared
+                        responsibility, clear communication,
+                        respect and a commitment to a common goal.
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="note">
+            <div class="container">
+                <p>
+                    <strong>Personalisation note:</strong> This page
+                    explains Tuckman's model and the lessons it can
+                    help illustrate. To make it a fully personal group
+                    reflection, add the actual assignment, what each
+                    member contributed, the challenges your group
+                    encountered, and what happened at each stage.
+                    Do not claim that a particular event occurred
+                    unless it reflects your group's experience.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Thulani Dawin Seleke</p>
+            <p>Group Reflection · Personal Academic Portfolio</p>
+        </div>
+    </footer>
+
+</body>
+</html>
