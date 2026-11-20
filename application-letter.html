@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application letter of Thulani Dawin Seleke, a Business Intelligence and Data Analytics student at Botswana Accountancy College.">
+    <title>Application Letter | Thulani Dawin Seleke</title>
+
+    <style>
+        :root {
+            --background: #f5f4ef;
+            --surface: #ffffff;
+            --text: #20221f;
+            --muted: #686d66;
+            --green: #40594b;
+            --line: #dedfd7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .site-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 7%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            font-weight: bold;
+            letter-spacing: -0.4px;
+            white-space: nowrap;
+        }
+
+        .brand span {
+            color: var(--green);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 0.78rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .page-intro {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 65px 7% 35px;
+        }
+
+        .eyebrow {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.72rem;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+
+        h1,
+        h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            letter-spacing: -1px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            line-height: 1.1;
+            max-width: 760px;
+            margin-bottom: 18px;
+        }
+
+        .page-intro p {
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .letter-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 7% 85px;
+        }
+
+        .letter-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .letter-toolbar p {
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .print-button {
+            background: var(--green);
+            color: white;
+            border: none;
+            padding: 12px 19px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .print-button:hover {
+            background: #2e4337;
+        }
+
+        .letter-paper {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: clamp(25px, 6vw, 70px);
+            box-shadow: 0 12px 35px rgba(32, 34, 31, 0.045);
+        }
+
+        .letter-name {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .letter-contact {
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .letter-divider {
+            border: none;
+            border-top: 1px solid var(--line);
+            margin: 25px 0;
+        }
+
+        .letter-date {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .letter-body p {
+            margin-bottom: 19px;
+            font-size: 0.96rem;
+        }
+
+        .letter-body .subject {
+            font-weight: bold;
+            margin: 24px 0;
+        }
+
+        .letter-body .closing {
+            margin-top: 28px;
+            margin-bottom: 5px;
+        }
+
+        .signature {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            margin-top: 20px;
+        }
+
+        .letter-note {
+            margin-top: 25px;
+            padding: 18px 20px;
+            border-left: 3px solid var(--green);
+            background: #ecefe9;
+            color: #48534a;
+            font-size: 0.86rem;
+        }
+
+        .letter-note strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--line);
+            padding: 25px 7%;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .nav-container {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: flex-start;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .site-header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 0.72rem;
+            }
+
+            .page-intro {
+                padding: 45px 5% 28px;
+            }
+
+            .letter-section {
+                padding: 0 5% 55px;
+            }
+
+            .letter-toolbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .letter-paper {
+                padding: 25px 20px;
+            }
+
+            .letter-body p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                font-size: 11pt;
+            }
+
+            .site-header,
+            .page-intro,
+            .letter-toolbar,
+            .letter-note,
+            .site-footer {
+                display: none !important;
+            }
+
+            .letter-section {
+                max-width: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .letter-paper {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .letter-body p {
+                font-size: 11pt;
+            }
+
+            @page {
+                size: A4;
+                margin: 2cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a class="brand" href="index.html">
+                Thulani <span>Seleke.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="reflection.html">Individual Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html" class="active">Application Letter</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Professional Communication</p>
+            <h1>Application Letter</h1>
+            <p>
+                A formal introduction to my academic background, practical
+                experience and interest in opportunities where I can contribute,
+                learn and grow professionally.
+            </p>
+        </section>
+
+        <section class="letter-section">
+            <div class="letter-toolbar">
+                <p>Formal application letter · A4 print-ready layout</p>
+                <button class="print-button" onclick="window.print()">
+                    Print / Save as PDF
+                </button>
+            </div>
+
+            <article class="letter-paper">
+                <header>
+                    <h2 class="letter-name">Thulani Dawin Seleke</h2>
+                    <p class="letter-contact">
+                        Mochudi, Botswana<br>
+                        Email: selekedawin@gmail.com<br>
+                        Telephone: +267 76910345
+                    </p>
+                </header>
+
+                <hr class="letter-divider">
+
+                <p class="letter-date">20 November 2026</p>
+
+                <p>
+                    The Hiring Manager<br>
+                    Recruitment Department
+                </p>
+
+                <div class="letter-body">
+                    <p>Dear Hiring Manager,</p>
+
+                    <p class="subject">
+                        RE: APPLICATION FOR AN INDUSTRIAL ATTACHMENT OR
+                        ENTRY-LEVEL OPPORTUNITY
+                    </p>
+
+                    <p>
+                        I am writing to express my interest in an industrial
+                        attachment or entry-level opportunity in business
+                        intelligence, data analytics, data administration or a
+                        related field. I am a first-year Business Intelligence
+                        and Data Analytics student at Botswana Accountancy
+                        College, and I am interested in applying my academic
+                        knowledge in a professional environment while continuing
+                        to develop practical skills.
+                    </p>
+
+                    <p>
+                        My academic background has helped me develop a foundation
+                        in mathematics, logical reasoning and problem-solving.
+                        Through my studies and practical coursework, I have also
+                        gained experience working with Microsoft Excel and
+                        Power BI. One of my practical projects involved
+                        preparing and analysing a New York City taxi dataset.
+                        I cleaned data using Power Query, developed charts for
+                        quantitative and categorical variables, and worked
+                        with key performance indicators and interactive slicers
+                        to support data exploration.
+                    </p>
+
+                    <p>
+                        In addition to my studies, I have gained practical
+                        experience in administrative and organisational tasks.
+                        At Flowers by Lelo, I assisted with social media page
+                        management and the receiving, arranging and delivery
+                        of flower orders. As a FIFA Connect administrator
+                        agent, I assisted with player registrations, transfers,
+                        renewals and record updates. I have also supported
+                        administrative payment processes relating to
+                        agricultural field preparation and planting services.
+                        These experiences have strengthened my organisation,
+                        communication, attention to detail and ability to
+                        handle responsibilities.
+                    </p>
+
+                    <p>
+                        I consider myself a willing learner who values
+                        teamwork, professionalism and continuous improvement.
+                        I communicate in English and Setswana and am prepared
+                        to learn from experienced colleagues, contribute to
+                        assigned tasks and approach new challenges with a
+                        positive and responsible attitude.
+                    </p>
+
+                    <p>
+                        I would welcome the opportunity to contribute to your
+                        organisation while gaining practical exposure relevant
+                        to my field of study. Thank you for considering my
+                        application. I would appreciate the opportunity to
+                        discuss how my background, interests and willingness
+                        to learn could contribute to your team.
+                    </p>
+
+                    <p class="closing">Yours faithfully,</p>
+
+                    <p class="signature">
+                        Thulani Dawin Seleke
+                    </p>
+                </div>
+            </article>
+
+            <aside class="letter-note">
+                <strong>Professional tip</strong>
+                This is a general application letter suitable for adapting to
+                relevant opportunities. Before sending it to a specific
+                organisation, check that the opportunity accepts your current
+                level of study and tailor the subject line and relevant details
+                to the advertised position.
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© 2026 Thulani Dawin Seleke</p>
+            <p>Professional growth through learning and practical experience.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
