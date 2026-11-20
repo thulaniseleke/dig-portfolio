@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills, practical projects and professional development of Thulani Dawin Seleke.">
+    <title>Skills &amp; Projects | Thulani Dawin Seleke</title>
+
+    <style>
+        :root {
+            --background: #f5f4ef;
+            --surface: #ffffff;
+            --text: #252922;
+            --muted: #686d65;
+            --accent: #40594b;
+            --accent-light: #e5ebe5;
+            --border: #dedfd7;
+            --dark: #202820;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1060px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            flex-shrink: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px 16px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+        }
+
+        .page-heading {
+            padding: 75px 0 55px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            line-height: 1.3;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            font-size: clamp(2.7rem, 6vw, 4.5rem);
+            letter-spacing: -2px;
+        }
+
+        .page-heading p {
+            max-width: 700px;
+            color: var(--muted);
+        }
+
+        section {
+            padding: 65px 0;
+        }
+
+        .section-heading {
+            max-width: 740px;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            margin-bottom: 12px;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            letter-spacing: -1px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            padding: 26px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .skill-index {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-size: 0.77rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.45rem;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .evidence {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 9px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.76rem;
+        }
+
+        .projects-section {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 35px;
+            padding: 32px;
+            border: 1px solid var(--border);
+        }
+
+        .project-side {
+            padding: 25px;
+            background: var(--accent-light);
+        }
+
+        .project-side span {
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .project-side h3 {
+            margin-bottom: 14px;
+            font-size: 1.8rem;
+        }
+
+        .project-side p {
+            color: #4f5c51;
+            font-size: 0.9rem;
+        }
+
+        .project-details h3 {
+            margin: 20px 0 8px;
+            font-size: 1.35rem;
+        }
+
+        .project-details h3:first-child {
+            margin-top: 0;
+        }
+
+        .project-details p,
+        .project-details li {
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .project-details ul {
+            padding-left: 20px;
+            margin: 10px 0 16px;
+        }
+
+        .project-details li {
+            margin-bottom: 7px;
+        }
+
+        .measure-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 14px;
+        }
+
+        .measure {
+            padding: 8px 12px;
+            background: var(--background);
+            border: 1px solid var(--border);
+            font-size: 0.81rem;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .experience-card {
+            padding: 25px;
+            border: 1px solid var(--border);
+        }
+
+        .experience-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.35rem;
+        }
+
+        .experience-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .approach {
+            padding: 65px 0;
+            background: var(--dark);
+            color: white;
+        }
+
+        .approach h2 {
+            margin-bottom: 15px;
+            font-size: 2.3rem;
+        }
+
+        .approach p {
+            max-width: 760px;
+            color: #c7cec6;
+        }
+
+        footer {
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 850px) {
+            .navbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+
+            .project-card {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: 92%;
+            }
+
+            .page-heading {
+                padding: 55px 0 38px;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                padding: 16px;
+                gap: 20px;
+            }
+
+            .project-side {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a class="brand" href="index.html">Thulani <span>Seleke.</span></a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="cv.html">CV</a>
+                <a href="reflection.html">Individual Reflection</a>
+                <a href="group-reflection.html">Group Reflection</a>
+                <a class="active" aria-current="page" href="skills-projects.html">Skills &amp; Projects</a>
+                <a href="application-letter.html">Application Letter</a>
+                <a href="email-template.html">Email Template</a>
+                <a href="study-resources.html">Study Resources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-heading">
+            <div class="container">
+                <span class="eyebrow">Practical Development / 05</span>
+                <h1>Skills &amp; Projects</h1>
+                <p>
+                    A record of the skills I am developing, the experience
+                    I have gained and the practical work connecting my
+                    academic learning with real tasks.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">01 / Skills</span>
+                    <h2>Capabilities I bring to my work.</h2>
+                    <p>
+                        My current skills reflect my academic foundation,
+                        administrative experience and continued development
+                        in business intelligence and data analytics.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <span class="skill-index">SKILL 01</span>
+                        <h3>Analytical Thinking</h3>
+                        <p>
+                            My foundation in mathematics and science supports
+                            logical reasoning, structured thinking and
+                            approaching problems methodically.
+                        </p>
+                        <span class="evidence">
+                            Evidence: Academic background
+                        </span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-index">SKILL 02</span>
+                        <h3>Data Handling &amp; Visualisation</h3>
+                        <p>
+                            I have practical learning experience with data
+                            cleaning, chart creation, measures and
+                            interactive dashboard elements using Excel
+                            and Power BI.
+                        </p>
+                        <span class="evidence">
+                            Evidence: NYC taxi data project
+                        </span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-index">SKILL 03</span>
+                        <h3>Communication</h3>
+                        <p>
+                            I communicate in English and Setswana and
+                            understand the importance of sharing information
+                            clearly and respectfully.
+                        </p>
+                        <span class="evidence">
+                            Evidence: Academic and administrative tasks
+                        </span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-index">SKILL 04</span>
+                        <h3>Organisation &amp; Administration</h3>
+                        <p>
+                            My experience with registrations, record updates,
+                            orders and payments has introduced me to tasks
+                            requiring care, accuracy and organisation.
+                        </p>
+                        <span class="evidence">
+                            Evidence: Previous work responsibilities
+                        </span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-index">SKILL 05</span>
+                        <h3>Teamwork</h3>
+                        <p>
+                            I value collaboration, shared responsibility
+                            and contributing to common objectives in
+                            academic and professional settings.
+                        </p>
+                        <span class="evidence">
+                            Evidence: Group work and team responsibilities
+                        </span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-index">SKILL 06</span>
+                        <h3>Adaptability &amp; Learning</h3>
+                        <p>
+                            I am willing to learn new processes, follow
+                            instructions, ask questions and improve my
+                            approach as I gain experience.
+                        </p>
+                        <span class="evidence">
+                            Evidence: Varied work and learning tasks
+                        </span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">02 / Featured Project</span>
+                    <h2>Exploring taxi trip data.</h2>
+                    <p>
+                        A practical learning project involving data
+                        preparation, analysis and interactive reporting.
+                    </p>
+                </div>
+
+                <article class="project-card">
+
+                    <div class="project-side">
+                        <span>Data Analytics Project</span>
+                        <h3>NYC Taxi Data Analysis Dashboard</h3>
+                        <p>
+                            Tools used: Microsoft Excel and Power BI
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+
+                        <h3>Project overview</h3>
+                        <p>
+                            This project involved working with a New York
+                            City taxi dataset to practise preparing,
+                            exploring and presenting data. The work
+                            included cleaning the dataset, examining
+                            quantitative and categorical variables,
+                            creating charts and building interactive
+                            dashboard components.
+                        </p>
+
+                        <h3>Work undertaken</h3>
+                        <ul>
+                            <li>
+                                Prepared and cleaned the dataset for
+                                analysis using Power Query.
+                            </li>
+                            <li>
+                                Explored quantitative and categorical
+                                variables using appropriate charts.
+                            </li>
+                            <li>
+                                Created measures for summarising trip
+                                and fare information.
+                            </li>
+                            <li>
+                                Added interactive slicers to help users
+                                filter dashboard information.
+                            </li>
+                            <li>
+                                Worked on KPI elements to present
+                                important measures clearly.
+                            </li>
+                        </ul>
+
+                        <h3>Measures explored</h3>
+                        <div class="measure-list">
+                            <span class="measure">Average Fare</span>
+                            <span class="measure">Average Tip Amount</span>
+                            <span class="measure">Average Trip Distance</span>
+                            <span class="measure">Total Revenue</span>
+                            <span class="measure">Total Trips</span>
+                        </div>
+
+                        <h3>What I learned</h3>
+                        <p>
+                            The project helped me practise data preparation,
+                            chart selection, dashboard design and
+                            interactivity. It also reinforced the
+                            importance of checking data quality and
+                            ensuring that measures and visualisations
+                            communicate information clearly.
+                        </p>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">03 / Practical Experience</span>
+                    <h2>Learning through responsibility.</h2>
+                    <p>
+                        Experience outside formal study has helped me
+                        develop transferable skills that are useful
+                        across different working environments.
+                    </p>
+                </div>
+
+                <div class="experience-grid">
+
+                    <article class="experience-card">
+                        <h3>Customer &amp; Order Support</h3>
+                        <p>
+                            At Flowers by Lelo, I assisted with social
+                            media page management, receiving and arranging
+                            flower orders, and deliveries. These tasks
+                            involved organisation and customer support.
+                        </p>
+                    </article>
+
+                    <article class="experience-card">
+                        <h3>Football Administration</h3>
+                        <p>
+                            As a FIFA Connect administrator agent, I
+                            handled player registrations, transfers,
+                            renewals and updates, supporting the
+                            administration of football records.
+                        </p>
+                    </article>
+
+                    <article class="experience-card">
+                        <h3>Agricultural Administration</h3>
+                        <p>
+                            As an administrator agent for Temo Letlotlo,
+                            I assisted with payments relating to ploughing,
+                            harrowing and planting services.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="approach">
+            <div class="container">
+                <span class="eyebrow">04 / Looking Ahead</span>
+                <h2>Building capability through practice.</h2>
+                <p>
+                    I intend to strengthen my technical knowledge,
+                    gain more experience with analytical tools and
+                    continue improving my communication and
+                    problem-solving skills. My aim is to connect
+                    what I learn academically with practical work
+                    and develop the judgement needed to use data
+                    responsibly and effectively.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Thulani Dawin Seleke</p>
+            <p>Skills &amp; Projects · Personal Academic Portfolio</p>
+        </div>
+    </footer>
+
+</body>
+</html>
